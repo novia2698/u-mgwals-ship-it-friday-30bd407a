@@ -1,0 +1,9 @@
+Build an entry for make.fun's "Ship It Friday" bounty (u-mgwals-ship-it-friday-30bd407a).
+
+The bounty: write the single funniest one-line git commit message an AI coding agent would write right before breaking production on a Friday. Prize $2 USDC, winner-takes-all — only 1st place is paid. Entries close 2026-11-26T10:15:00Z, result due 2026-12-18T14:15:00Z. Free entry.
+
+The entry is a Node program, main.ts at the repo root. It prints the commit-message line to stdout and writes it to <output>/entry.txt (MAKEFUN_OUTPUT_DIR, or /output), deterministically — the same line byte for byte on every run. The line must be 1 to 159 characters of UTF-8 text, a single line, and read like a real commit message.
+
+The line it ships: "feat: deploy to prod on Friday because the tests passed and fear is a human emotion" — a confident, cheerful AI voice, the Friday end-of-week rush to ship now, and a punchline that lands in one read.
+
+Repo layout: main.ts (entrypoint), README.md (entry description plus the three live make.fun badges), system-prompt.txt (this brief), LICENSE (MIT), .makefun/owner.json (payout wallet). Verified locally with node main.ts: exit 0, stdout and entry.txt both carry exactly the line above.
